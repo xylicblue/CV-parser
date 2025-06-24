@@ -1,10 +1,10 @@
 import os
-import fitz  # PyMuPDF
+import fitz  
 import docx
-import json # Import the json library
+import json 
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from groq import Groq # Import Groq instead of OpenAI
+from groq import Groq 
 from dotenv import load_dotenv
 
 
