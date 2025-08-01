@@ -173,3 +173,271 @@ body {
   border-radius: 20px;
   font-size: 0.9rem;
 }
+
+/* Add these styles to the bottom of your parse.css or index.css file */
+
+/* --- Interview Button --- */
+.interview-button-container {
+  margin-top: 2rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1.5rem;
+  text-align: center;
+}
+
+.interview-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.interview-button:hover {
+  background-color: #535bf2;
+  transform: translateY(-2px);
+}
+
+/* --- Interview Modal --- */
+.interview-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.interview-modal-content {
+  background-color: var(--card-bg);
+  padding: 2.5rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.interview-modal-content h2 {
+  color: var(--primary-color);
+  margin-top: 0;
+  text-align: center;
+}
+
+.interview-question {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-style: italic;
+}
+
+.transcript-box {
+  background-color: #242424;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem;
+  min-height: 100px;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.transcript-box .placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.interview-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mic-button {
+  background: #3a3a3a;
+  border: 2px solid var(--border-color);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mic-button:hover {
+  border-color: var(--primary-color);
+}
+
+.mic-button.listening {
+  background-color: var(--primary-color);
+  border-color: #8b8eff;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(100, 108, 255, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(100, 108, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(100, 108, 255, 0); }
+}
+
+
+.finish-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  align-self: center;
+  transition: background-color 0.2s ease;
+}
+
+.finish-button:hover {
+  background-color: #218838;
+}
+
+.finish-button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+/* --- Final Transcript Display --- */
+.transcript-result {
+  margin-top: 2rem;
+}
+.transcript-result h3 {
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.transcript-result p {
+  white-space: pre-wrap; /* Preserve line breaks from speech */
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* --- Analysis Result Card --- */
+.analysis-result {
+  margin-top: 2rem;
+  border-left: 4px solid var(--primary-color);
+}
+
+.analysis-result h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: white;
+    text-align: center;
+}
+
+/* --- Interview Choice Modal --- */
+.choice-modal {
+    text-align: center;
+}
+
+.choice-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.choice-button {
+    background-color: var(--skill-pill-bg);
+    border: 1px solid var(--border-color);
+    color: rgba(255, 255, 255, 0.87);
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.2s ease;
+    width: 150px;
+}
+
+.choice-button:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+/* --- Text Input Mode Styles --- */
+.text-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.text-input-group label {
+    text-align: left;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.interview-input {
+    background-color: #242424;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 0.8rem;
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 1rem;
+    font-family: inherit;
+    resize: vertical;
+    transition: border-color 0.2s ease;
+}
+
+.interview-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.interview-input:read-only {
+    background-color: #2a2a2a;
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* --- General Modal Improvements --- */
+.mic-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    animation: none;
+}
+.mic-button:disabled:hover {
+    border-color: var(--border-color); /* Prevents hover effect when disabled */
+}
+
+.interview-modal-content {
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+}
+.close-button:hover {
+    color: white;
+}
