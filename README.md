@@ -1,26 +1,49 @@
-# 📄 CV Parser & AI Interview (React + Flask + LLaMA via Groq)
+# CV Parser & AI Interview Assistant
 
-This project is a **CV parsing and AI interview platform** that extracts key details from resumes (PDF/DOCX) and conducts an **AI-driven interview** to understand the candidate’s career goals and targeted role. It uses **React** for the frontend, **Flask** for the backend, and **LLaMA (via Groq API)** for AI processing.
-
----
-
-## 🔑 Features
-
-- **CV Parsing**:
-  - Upload PDF/DOCX resumes.
-  - Extracts **name, role, contact info, skills, and skill gaps**.
-
-- **AI Interview**:
-  - Asks users for their **career goals and desired role**.
-  - Supports both **text input** and **voice input** (via Web Speech API).
-  - Displays parsed responses: role aimed for & goals.
-
-- **Tech Stack**:
-  - **Frontend**: React (with Web Speech Recognition for voice input).
-  - **Backend**: Flask (Python) using Groq’s **LLaMA AI** for parsing logic.
-  - **Environment Variables**: Groq API key stored in `.env`.
+This project is a **CV Parser and AI Interview Assistant** that processes resumes (PDF/DOCX), extracts relevant information, identifies skill gaps, and provides an **AI-powered interview assistant** that understands user goals and desired roles through **text or voice input**.
 
 ---
 
-## 📂 Project Structure
+## Features
 
+### 1. **CV Parser**
+- Upload a **PDF or DOCX resume**.
+- Automatically extracts:
+  - Name  
+  - Role  
+  - Contact Information  
+  - Skills  
+  - Skill gaps  
+
+Uses **LLaMA AI (via Groq API)** to parse and process resume data.
+
+### 2. **AI Interview Assistant**
+- User can interact with the AI to share:
+  - Career goals  
+  - Desired role/position  
+- Input is supported via:
+  - **Text** (manual entry)  
+  - **Voice** (using browser's speech recognition API).  
+- AI then identifies and displays the **role** and **goals** mentioned.
+
+---
+
+## Tech Stack
+
+### **Frontend**
+- **React.js** (UI for uploading resumes and interacting with AI)
+- **Window Speech Recognition API** (for voice input support)
+
+### **Backend**
+- **Flask (Python)** for handling API requests
+- **Groq API (LLaMA AI)** for parsing resumes and AI interview logic
+- **PDF/DOCX Parsing** to extract resume content
+
+---
+
+## Setup & Installation
+
+### **1. Clone the repository**
+```bash
+git clone <your-repo-url>
+cd <repo-name>
